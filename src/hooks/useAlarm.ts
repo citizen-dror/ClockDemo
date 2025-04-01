@@ -3,7 +3,7 @@ import { UseAlarmReturn } from '../types/alarmTypes';
 
 const useAlarm = (): UseAlarmReturn => {
   const snoozeIntervalInMinutes = 1;
-  const maxSnoozes = 3;
+  const maxSnoozes = 2;
 
   const [alarmTime, setAlarmTime] = useState<string>(''); // Format: HH:MM
   const [isAlarmSet, setIsAlarmSet] = useState<boolean>(false);
@@ -46,7 +46,7 @@ const useAlarm = (): UseAlarmReturn => {
 
       console.log(`Snoozed. New alarm time: ${newAlarmTime}. Snooze count: ${snoozeCount + 1}`);
 
-      if (snoozeCount + 1 >=  maxSnoozes -1 ) {
+      if (snoozeCount + 1 >=  maxSnoozes) {
         setCanSnooze(false); // Disable snooze button after max snoozes (start count from 0)
       }
     }
