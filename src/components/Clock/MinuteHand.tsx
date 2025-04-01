@@ -8,6 +8,7 @@ const MinuteHand: React.FC<MinuteHandProps> = ({ degree }) => {
   return (
     <div
       className="minute-hand"
+      data-testid="minute-hand"
       style={{ transform: `rotate(${degree}deg)` }}
     ></div>
   );

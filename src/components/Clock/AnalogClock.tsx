@@ -12,9 +12,9 @@ const AnalogClock: React.FC = () => {
   return (
     <div className="clock">
       <div className="clock-face">
-        <HourHand degree={hourDegree} />
-        <MinuteHand degree={minuteDegree} />
-        <SecondHand degree={secondDegree} />
+        <HourHand degree={hourDegree} data-testid="hour-hand" />
+        <MinuteHand degree={minuteDegree} data-testid="minute-hand" />
+        <SecondHand degree={secondDegree} data-testid="second-hand" />
         <div className="center-dot"></div>
       </div>
     </div>

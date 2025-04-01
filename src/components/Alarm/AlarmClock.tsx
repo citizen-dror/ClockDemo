@@ -18,12 +18,13 @@ const AlarmClock: React.FC = () => {
     <div className="alarm-clock">
       <input
         id="alarm-time-input"
+        data-testid="alarm-time-input"
         type="time"
         value={alarmTime}
         onChange={(e) => setAlarmTime(e.target.value)}
         disabled={isAlarmSet}
       />
-      <button id="set-alarm-button" onClick={handleSetAlarm} disabled={isAlarmSet}>
+      <button id="set-alarm-button" data-testid="set-alarm-button" onClick={handleSetAlarm} disabled={isAlarmSet}>
         Set Alarm
       </button>
       {isAlarmTriggered && <AlarmModal onDismiss={dismissAlarm} onSnooze={snoozeAlarm} canSnooze={canSnooze} />}
