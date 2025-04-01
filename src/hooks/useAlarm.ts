@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback } from 'react';
 import { UseAlarmReturn } from '../types/alarmTypes';
 
 const useAlarm = (): UseAlarmReturn => {
-  const snoozeIntervalInMinutes = 1;
+  const snoozeIntervalInMinutes = 5;
   const maxSnoozes = 2;
 
   const [alarmTime, setAlarmTime] = useState<string>(''); // Format: HH:MM
