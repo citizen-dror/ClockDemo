@@ -10,7 +10,7 @@ interface AlarmModalProps {
 
 const AlarmModal: React.FC<AlarmModalProps> = ({ onDismiss, onSnooze, canSnooze }) => {
   return (
-    <Modal className="alarm-clock">
+    <Modal className="alarm-modal">
       <h2>Alarm!</h2>
       {canSnooze && <button id="snooze-button" onClick={onSnooze}>Snooze</button>}
       <button id="dismiss-button" onClick={onDismiss}>Dismiss</button>
