@@ -24,11 +24,11 @@
     left: 50%;
     transform-origin: 50% 100%;
     transform: translateX(-50%);
-    transition: transform 0.1s ease-in-out;
+    transition: none;
   }
   
   .hour-hand {
-    width: 8px;
+    width: 4px;
     height: 80px;
     background-color: #333;
   }
