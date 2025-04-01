@@ -1,5 +1,6 @@
 import React from 'react';
 import Modal from '../Common/Modal'; 
+import './AlarmModal.css';
 
 interface AlarmModalProps {
   onDismiss: () => void;
@@ -9,10 +10,10 @@ interface AlarmModalProps {
 
 const AlarmModal: React.FC<AlarmModalProps> = ({ onDismiss, onSnooze, canSnooze }) => {
   return (
-    <Modal>
+    <Modal className="alarm-clock">
       <h2>Alarm!</h2>
-      {canSnooze && <button onClick={onSnooze}>Snooze</button>}
-      <button onClick={onDismiss}>Dismiss</button>
+      {canSnooze && <button id="snooze-button" onClick={onSnooze}>Snooze</button>}
+      <button id="dismiss-button" onClick={onDismiss}>Dismiss</button>
     </Modal>
   );
 };

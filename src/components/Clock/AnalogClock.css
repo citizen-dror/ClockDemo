@@ -1,10 +1,13 @@
 .clock {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f0f0f0;
-  }
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  user-select: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
   
   .clock-face {
     position: relative;
@@ -14,6 +17,7 @@
     border-radius: 50%;
     background-color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    user-select: none;
   }
   
   .hour-hand,
@@ -25,6 +29,7 @@
     transform-origin: 50% 100%;
     transform: translateX(-50%);
     transition: none;
+    user-select: none;
   }
   
   .hour-hand {
@@ -47,8 +52,8 @@
   
   .center-dot {
     position: absolute;
-    width: 12px;
-    height: 12px;
+    width: 14px;
+    height: 14px;
     background-color: black;
     border-radius: 50%;
     top: 50%;

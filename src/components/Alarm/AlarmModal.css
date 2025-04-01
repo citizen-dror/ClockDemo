@@ -1,0 +1,45 @@
+.alarm-modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    margin: auto;
+    border: 2px solid #3b30a4;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .alarm-modal h2 {
+    color: #3b30a4;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .alarm-modal button {
+    width: 100px;
+    padding: 10px;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #3b30a4;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .alarm-modal button:hover {
+    background-color: #2a2378;
+  }
+  
+  .alarm-modal button:disabled {
+    background-color: #d3d3d3;
+    cursor: not-allowed;
+  }
+  
+  .alarm-modal button + button {
+    margin-left: 10px;
+  }
