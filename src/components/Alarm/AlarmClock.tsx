@@ -1,7 +1,8 @@
 import React from 'react';
 import useAlarm from '../../hooks/useAlarm';
 import AlarmModal from './AlarmModal';
-import './AlarmClock.css'
+import { Card, Button, TimeInput } from '../Common';
+import './AlarmClock.css';
 
 const AlarmClock: React.FC = () => {
   const {
@@ -14,21 +15,43 @@ const AlarmClock: React.FC = () => {
     handleSetAlarm,
     canSnooze
   } = useAlarm();
+
   return (
-    <div className="alarm-clock">
-      <input
-        id="alarm-time-input"
-        data-testid="alarm-time-input"
-        type="time"
-        value={alarmTime}
-        onChange={(e) => setAlarmTime(e.target.value)}
-        disabled={isAlarmSet}
-      />
-      <button id="set-alarm-button" data-testid="set-alarm-button" onClick={handleSetAlarm} disabled={isAlarmSet || alarmTime === '' }>
-        Set Alarm
-      </button>
+    <Card className="alarm-clock-card">
+      <Card.Header>Alarm Clock</Card.Header>
+      <Card.Body>
+        <div className="alarm-clock-content">
+          <div className="alarm-time-container">
+            <TimeInput
+              id="alarm-time-input"
+              data-testid="alarm-time-input"
+              value={alarmTime}
+              onChange={setAlarmTime}
+              disabled={isAlarmSet}
+            />
+          </div>
+          
+          <div className="alarm-actions">
+            <Button 
+              variant="primary"
+              onClick={handleSetAlarm}
+              disabled={isAlarmSet || alarmTime === ''}
+              data-testid="set-alarm-button"
+            >
+              Set Alarm
+            </Button>
+            
+            {isAlarmSet && !isAlarmTriggered && (
+              <div className="alarm-status">
+                Alarm set for {alarmTime}
+              </div>
+            )}
+          </div>
+        </div>
+      </Card.Body>
+      
       {isAlarmTriggered && <AlarmModal onDismiss={dismissAlarm} onSnooze={snoozeAlarm} canSnooze={canSnooze} />}
-    </div>
+    </Card>
   );
 };
 

@@ -1,39 +1,33 @@
-.alarm-clock {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    margin: 20px auto;
-    padding: 20px;
-    max-width: 400px;
-    border-radius: 10px;
-    background-color: #f0f0f0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  .alarm-clock input {
-    padding: 8px;
-    font-size: 16px;
-    border: 2px solid #3b30a4;
-    border-radius: 5px;
-  }
-  
-  .alarm-clock button {
-    padding: 10px 15px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    background: #3b30a4;
-    color: white;
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
-  }
-  
-  .alarm-clock button:disabled {
-    background: #ccc;
-    cursor: not-allowed;
-  }
-  
-  .alarm-clock button:hover:not(:disabled) {
-    background: #2a237a;
-  }
+.alarm-clock-card {
+  width: 100%;
+  max-width: 400px;
+  margin: 1rem auto;
+}
+
+.alarm-clock-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.alarm-time-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.alarm-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.alarm-status {
+  margin-top: 0.5rem;
+  color: var(--success);
+  font-weight: var(--font-weight-bold);
+}
