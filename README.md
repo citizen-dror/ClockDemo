@@ -17,6 +17,17 @@ A simple analog clock built with React and TypeScript using Vite. This project f
 - Users can snooze the alarm, delaying it by 5 minutes.
 - After 3 snoozes, further snoozing is disabled, leaving only a dismiss option.
 
+### Reusing Components with the Common Library
+
+To maintain consistency and reduce code duplication, the project leverages a Common library that provides reusable UI components:
+
+- **Card**: Used to wrap sections of the UI in a structured manner.
+- **Modal**: Displays alarm notifications and snooze options in a user-friendly popup.
+- **Button**: Standardized buttons for setting alarms, snoozing, and dismissing.
+- **TimeInput**: A custom input field for selecting alarm times efficiently.
+- **Styles**: A centralized style system that defines color variables and typography.
+By centralizing these components in a common library, the project ensures better maintainability and a unified design across all interactive elements.
+
 ## Constraints
 - The project uses only basic **HTML, CSS, and React**.  
 - **No images** are used to render the clock interface.  
